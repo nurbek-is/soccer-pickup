@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soccer Pickup</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/contact.css" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <script type="text/javascript">
+	function html5_storage_support() {
+	  try {
+		return 'localStorage' in window && window['localStorage'] !== null;
+	  } catch (e) {
+		return false;
+	  }
+	}
+	function saveit() {
+	  if (html5_storage_support()) {
+		var name = document.getElementById("name").value;
+		var phone = document.getElementById("phone").value;
+		var email = document.getElementById("email").value;
+		var website = document.getElementById("website").value;
+		var DOB = document.getElementById("DOB").value;
+		localStorage.setItem('name',name);
+		localStorage.setItem('phone',phone);
+		localStorage.setItem('email',email);
+		localStorage.setItem('website',website);
+		localStorage.setItem('DOB',DOB);
+	  }
+	}
+
+	function restoreit() {
+	  if (html5_storage_support()) {
+		document.getElementById('name').value = localStorage.getItem('name');
+		document.getElementById('phone').value = localStorage.getItem('phone');
+		document.getElementById('email').value = localStorage.getItem('email');
+		document.getElementById('website').value = localStorage.getItem('website');
+		document.getElementById('DOB').value = localStorage.getItem('DOB');
+	  }
+	}
+  </script>
+</head>
+
+<body>
+  <div id="container">
+	<header>
+	  <a href="index.html"><img src="images/logo.png" alt="Soccer Pickup" id="logo" /></a>
+	  <nav id="mainnav">
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li><a href="find-a-game.html">Find a Game</a></li>
+		  <li><a href="about.html">About</a></li>
+		  <li><a href="contact.html">Contact</a></li>
+		</ul>
+	  </nav>
+	</header>
+	<div id="maincontent">
+		<h1>Register Now</h1>
+		  <form action="index.html" method="post">
+			<label for="name">Name</label><br>
+			<input type="text" name="name" id="name" placeholder="Jane Doe"><br>
+			<br>
+			<label for="phone">Phone</label><br>
+			<input type="tel" name="phone" id="phone"><br>
+			<br>
+			<label for="email">Email</label><br>
+			<input type="email" name="email" id="email"><br>
+			<br>
+			<label for="website">Website URL</label><br>
+			<input type="url" name="website" id="website"><br>
+			<br>
+			<label for="DOB">Date of Birth</label><br>
+			<input type="date" name="DOB" id="DOB"><br>
+			<br>
+			<input type="submit">
+			<button onclick="saveit()">Save</button>
+			<button onclick="restoreit()">Restore from Saved</button>
+		  </form>
+	</div>
+	<aside id="sidebar">
+		<h3>About Us</h3>
+		<p>Soccer Pickup is your source for finding local recreational soccer games for adults. Leagues are great - but sometimes you just want to lace up your boots and find an informal game. Check back often to find a game near you!</p>
+	</aside>
+	<footer id="footerinfo">
+	  <p>Soccer Pickup: Your guide to finding a game.</p>
+	</footer>
+  </div>
+</body>
+</html>
