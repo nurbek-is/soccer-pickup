@@ -15,7 +15,13 @@ a:hover {
 #container {
 	width:85%;
 	margin:0 auto;
-	background: #fff  url('../images/bg_soccerballs.png') repeat-y 65.520833% 0;
+	background: #fff url('../images/bg_soccerballs.png') repeat-y 65.520833% 0;
+}
+
+@media screen and (max-device-width: 480px) {
+	#container {
+		background: #fff;
+	}
 }
 
 header {
@@ -31,6 +37,13 @@ nav {
 	float:right;
 }
 
+@media screen and (max-device-width: 480px) {
+	nav {
+		float:none;
+		background:#ccc;
+	}
+}
+
 nav ul {
 	display:inline;
 }
@@ -44,72 +57,71 @@ nav ul li a {
 	text-decoration:none;
 	margin-left:20px;
 }
-@media screen and (max-width: 600px) {
-    nav {
-      float:none;
-      border-top:1px solid #333;
-      border-bottom:1px solid #333;
-    }
-  }
+
+@media screen and (max-device-width: 480px) {
+	nav ul li a {
+		color:#000;
+		margin-left:10px;
+	}
+}
 
 #maincontent {
-	width:61.7708333333%; /* 593/960 */
+	width:61.7708333333%;
 	padding:1.0416666% 0 3.75% 3.75%;
 	float:left;
+}
+
+@media screen and (max-device-width: 480px) {
+	#maincontent {
+		width:96.25%;
+		padding:1.0416666% 0 3.75% 3.75%;
+		float:none;
+	}
 }
 
 #maincontent h1 {
 	font-size:36px;
 	margin:5px 0 20px 0;
-
 }
 
 #maincontent .game {
 	float:left;
-	width:48.22934232%; /* 286/593 */
+	width:47.892074199%;
 	line-height:14px;
 	font-size:14px;
-	margin:0.8431703204%; /* 5/593 */
-}
-#maincontent .game:nth-of-type(odd) {
-	clear:both;
-}
- 
-@media screen and (max-width: 960px) {
-  #maincontent .game {
-	padding-bottom:20px;
-  }
-}
- 
-#maincontent .game img {
-  float:left;
-  margin:0 2.86% 0 0;
-  max-width:100%;
-}
- 
-@media screen and (max-width: 960px) {
-  #maincontent .game img {
-	float:none;
-  }
+	margin:0.8431703204%;
 }
 
-@media screen and (max-width: 960px) {
-  #maincontent .game h3 {
-	font-size:20px;
-	margin:3px 0;
-	line-height:22px;
-  }
+#maincontent .game:nth-of-type(odd) {
+    clear:both;
 }
+
+#maincontent .game img {
+	float:left;
+	margin:0 2.86% 0 0;
+	max-width:100%;
+}
+
 #maincontent iframe {
-    max-width:100%;
-  }
-   
+	max-width:100%;
+}
+
 #sidebar {
-	width:26.9791666667%; /* 259/960 */
+	width:26.9791666667%;
 	float:right;
 	padding:3.75%;
 	color:#333;
 	line-height:20px;
+}
+
+@media screen and (max-device-width: 480px) {
+	#sidebar {
+		width:96.25%;
+		padding:3.75% 0 3.75% 3.75%;
+		float:none;
+		clear:left;
+		background:#ccc;
+	}
 }
 
 #sidebar h3 {
@@ -126,4 +138,3 @@ nav ul li a {
 #footerinfo p {
 	color:#fff;
 }
- 
