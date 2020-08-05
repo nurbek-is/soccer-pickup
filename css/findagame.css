@@ -57,7 +57,154 @@ nav ul li a {
 	text-decoration:none;
 	margin-left:20px;
 }
+body {
+	font-family:Georgia,serif;
+	background-image:url('../images/bg_grass.jpg');
+}
 
+a {
+	text-decoration:none;
+	color:#4040AD;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+#container {
+	width:85%;
+	margin:0 auto;
+	background: #fff url('../images/bg_soccerballs.png') repeat-y 65.520833% 0;
+}
+
+@media screen and (max-device-width: 480px) {
+	#container {
+		background: #fff;
+	}
+}
+
+header {
+	background-color:#d0b462;
+}
+
+header #logo {
+	margin:1.0416666% 0 1.0416666% 3.75%;
+}
+
+nav {
+	padding:1.0416666% 3.75% 1.0416666% 3.75%;
+	float:right;
+}
+
+@media screen and (max-device-width: 480px) {
+	nav {
+		float:none;
+		background:#ccc;
+	}
+}
+
+nav ul {
+	display:inline;
+}
+
+nav ul li {
+	display:inline;
+}
+
+nav ul li a {
+	color:#fff;
+	text-decoration:none;
+	margin-left:20px;
+}
+
+@media screen and (max-device-width: 480px) {
+	nav ul li a {
+		color:#000;
+		display:block;
+		padding:2% 0;
+	}
+}
+
+#maincontent {
+	width:61.7708333333%; /* 593/960 */
+	padding:1.0416666% 0 3.75% 3.75%;
+	float:left;
+}
+
+@media screen and (max-device-width: 480px) {
+	#maincontent {
+		width:96.25%;
+		padding:1.0416666% 0 3.75% 3.75%;
+		float:none;
+	}
+}
+
+#maincontent h1 {
+	font-size:36px;
+	margin:5px 0 20px 0;
+}
+
+#maincontent .game {
+	float:left;
+	width:48.22934232%; /* 286/593 */
+	line-height:14px;
+	font-size:14px;
+	margin:0.8431703204%; /* 5/593 */
+}
+
+#maincontent .game:nth-of-type(odd) {
+    clear:both;
+}
+
+#maincontent .game img {
+	float:left;
+	margin:0 2.86% 0 0;
+	max-width:100%;
+}
+
+#maincontent #mapcontainer {
+	width:98%;
+	height:400px;
+}
+
+
+#maincontent iframe {
+	max-width:100%;
+}
+
+
+#sidebar {
+	width:26.9791666667%; /* 259/960 */
+	float:right;
+	padding:3.75%;
+	color:#333;
+	line-height:20px;
+}
+
+@media screen and (max-device-width: 480px) {
+	#sidebar {
+		width:96.25%;
+		padding:3.75% 0 3.75% 3.75%;
+		float:none;
+		clear:left;
+		background:#ccc;
+	}
+}
+
+#sidebar h3 {
+	font-style:italic;
+	font-size:20px;
+	margin:0 0 5px 0;
+}
+
+#footerinfo {
+	clear: both;
+	background-color:#151570;
+	padding:1.0416666% 0 1.0416666% 3.75%;
+}
+#footerinfo p {
+	color:#fff;
+}
 @media screen and (max-device-width: 480px) {
 	nav ul li a {
 		color:#000;
