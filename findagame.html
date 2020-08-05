@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soccer Pickup</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+</head>
+
+
+<body>
+  <div id="container">
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="Soccer Pickup" id="logo" /></a>
+      <nav id="mainnav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="find-a-game.html">Find a Game</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <script>
+          if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(locateSuccess, locateFail);
+}
+ 
+function locateSuccess(loc) {
+  var latitude = loc.coords.latitude;
+  var longitude = loc.coords.longitude;
+  alert('You are at ' + latitude + ', ' + longitude);
+}
+ 
+function locateFail(geoPositionError) {
+  switch (geoPositionError.code) {
+    case 0: // UNKNOWN_ERROR
+      alert('An unknown error occurred, sorry');
+      break;
+    case 1: // PERMISSION_DENIED
+      alert('Permission to use Geolocation was denied');
+      break;
+    case 2: // POSITION_UNAVAILABLE
+      alert('Couldn\'t find you...');
+      break;
+    case 3: // TIMEOUT
+      alert('The Geolocation request took too long and timed out');
+      break;
+    default:
+  }
+}
+      </script>
+    </header>
+    <div id="maincontent">
+        
+    <footer id="footerinfo">
+      <p>Soccer Pickup: Your guide to finding a game.</p>
+    </footer>
+  </div>
+</body>
+</html>
