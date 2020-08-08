@@ -70,7 +70,7 @@ nav ul li a {
 	}
 } 
 
-#maincontent iframe {
+#maincontent iframe,#maincontent video {
 	max-width:100%;
 }
 #sidebar {
