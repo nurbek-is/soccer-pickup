@@ -43,6 +43,21 @@ nav {
 		/* background:#ccc;	 */
 	}
 }
+.slicknav_menu {
+	display:none;
+	background-color:#d0b462;
+}
+
+@media screen and (max-width: 520px) {
+	.slicknav_menu {
+		display:block;
+	}
+	nav ul {
+		display:none;
+	}
+}
+
+
 
 
 nav ul li {
