@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soccer Pickup</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/slicknav.css" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src="js/media.js"></script>
+
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+</head>
+
+<body>
+	<div id="container">
+	<header>
+		<a href="index.html"><img src="images/logo.png" alt="Soccer Pickup" id="logo" /></a>
+		<nav id="mainnav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="findagame.html">Find a Game</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="media.html">Media</a></li>
+		</ul>
+	</nav>
+	</header>
+	<div id="maincontent">
+		<h1>Soccer Video</h1>
+		<p>Embedded video:</p>
+		<iframe src="http://player.vimeo.com/video/11828030?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe><p><a href="http://vimeo.com/11828030">FIFA World Cup 2010 South Africa</a> from <a href="http://vimeo.com/cguinnness">Christopher Guinness</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+		<p>Hosted video:</p>
+		<video width="720" height="405" controls poster="images/poster.png" id="vid">
+			<source type="video/mp4" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></source>
+			<source type="video/webm" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm"></source>
+			<source type="video/ogg" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"></source>
+			<p>Your browser does not support the video tag</p>
+		</video>
+		<div>  
+		<button onclick="document.getElementById('vid').play()">
+				Play</button>
+		<button onclick="document.getElementById('vid').pause()">
+				Pause</button>
+		<button onclick="document.getElementById('vid').volume+=0.1">
+				Incr. Volume</button>  
+		<button onclick="document.getElementById('vid').volume-=0.1">
+				Decr. Volume</button>
+		</div>
+	</div>
+	<aside id="sidebar">
+		<h3>About Us</h3>
+		<p>Soccer Pickup is your source for finding local recreational soccer games for adults. Leagues are great - but sometimes you just want to lace up your boots and find an informal game. Check back often to find a game near you!</p>
+	</aside>
+	<footer id="footerinfo">
+		<p>Soccer Pickup: Your guide to finding a game.</p>
+	</footer>
+	</div>
+</body>
+</html>

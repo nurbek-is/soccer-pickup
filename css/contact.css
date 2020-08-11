@@ -65,7 +65,19 @@ nav ul li a {
 		padding:2% 0;
 	}
 }
+.slicknav_menu {
+	display:none;
+	background-color:#d0b462;
+}
 
+@media screen and (max-width: 520px) {
+	.slicknav_menu {
+		display:block;
+	}
+	nav ul {
+		display:none;
+	}
+}
 #maincontent {
 	width:61.7708333333%; /* 593/960 */
 	padding:1.0416666% 0 3.75% 3.75%;
