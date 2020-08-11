@@ -3,11 +3,14 @@
 <head>
 	<title>Soccer Pickup</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/slicknav.css" />
 	<link rel="stylesheet" type="text/css" href="css/findagame.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="js/jquery.slicknav.min.js"></script>
+	<script src='js/findagame.js'></script>
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAgvRs8Ud9qJVcU5gL7TfWNXJABZ0JuXsw"></script>
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 </head>
-
 <body>
 	<div id="container">
 	<header>
@@ -15,7 +18,7 @@
 	<nav id="mainnav">
 		<ul>
 			<li><a href="index.html">Home</a></li>
-			<li><a href="find-a-game.html">Find a Game</a></li>
+			<li><a href="findagame.html">Find a Game</a></li>
 			<li><a href="about.html">About</a></li>
 			<li><a href="contact.html">Contact</a></li>
 			<li><a href="media.html">Media</a></li>
@@ -25,67 +28,7 @@
 	<div id="maincontent">
 		<h1>Nearby Games</h1>
 		<div id="mapcontainer"></div>
-		<script type="text/javascript">
-
-			if (navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(locateSuccess, locateFail);
-			}
-
-			function locateSuccess(loc) {
-				var latitude = loc.coords.latitude;
-				var longitude = loc.coords.longitude;
-				var coords = new google.maps.LatLng(latitude, longitude);
-
-				//create two fake pickup game locations, near to the user's current location:
-				var fakegame1_coords = new google.maps.LatLng(latitude + (Math.random()/100), longitude - (Math.random()/100));
-				var fakegame2_coords = new google.maps.LatLng(latitude - (Math.random()/100), longitude + (Math.random()/100));
-
-				//set options for the Google Map:
-				var options = {
-					zoom: 8,
-					center: coords,
-					mapTypeId: google.maps.MapTypeId.HYBRID
-				};
-
-				//create the Google Map:
-				var map = 
-						new google.maps.Map(document.getElementById("mapcontainer"), options);
-
-				//create display text for the map popup window and the popup window
-				var infoWindowText = "<p>You are at "+latitude+","+longitude+"</p>";
-				var infowindow = new google.maps.InfoWindow({
-					content: infoWindowText
-				});
-
-				//create a marker for the user's current position
-				var marker = new google.maps.Marker({
-					position: coords,
-					map: map
-				});
-
-				//create markers for the two games
-				var fakegame1_marker = new google.maps.Marker({
-					position: fakegame1_coords,
-					map: map
-				});
-				var fakegame2_marker = new google.maps.Marker({
-					position: fakegame2_coords,
-					map: map
-				});
-
-				//enable clicking on the current-location marker
-				google.maps.event.addListener(marker, 'click', function() {
-					infowindow.open(map,marker);
-				});
-
-				//popup the current-location window when the page loads
-				google.maps.event.trigger(marker, 'click');
-
-			}
-			function locateFail(geoPositionError) {
-				alert('An unknown error occurred, sorry');
-			}
-</script>
+ 
 	</div>
 	<aside id="sidebar">
 		<h3>About Us</h3>

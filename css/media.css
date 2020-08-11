@@ -1,6 +1,6 @@
 body {
     font-family: Georgia, serif;
-    background-image:url("../images/bg_grass.jpg");  
+    background-image:url("../images/bg_grass.jpg");
 }
  a:hover {
     text-decoration: underline;
@@ -53,9 +53,22 @@ nav ul li a {
      padding:2% 0;
         }
     }
+.slicknav_menu {
+	display:none;
+	background-color:#d0b462;
+}
+
+@media screen and (max-width: 520px) {
+	.slicknav_menu {
+		display:block;
+	}
+	nav ul {
+		display:none;
+	}
+}
 #maincontent {
     width:61%;
-    padding: 1.04% 0 3.75% 3.75%; 
+    padding: 1.04% 0 3.75% 3.75%;
     float:left;
 }
 #maincontent h1 {
@@ -68,7 +81,7 @@ nav ul li a {
 		padding:1.0416666% 0 3.75% 3.75%;
 		float:none;
 	}
-} 
+}
 
 #maincontent iframe,#maincontent video {
 	max-width:100%;
@@ -93,7 +106,7 @@ nav ul li a {
 		clear:left;
 		background:#ccc;
 	}
-} 
+}
 
  #footerinfo {
 	clear: both;
@@ -103,5 +116,3 @@ nav ul li a {
 #footerinfo p {
 	color:#fff;
 }
-
-
